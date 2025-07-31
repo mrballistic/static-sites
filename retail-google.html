@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save to Google Wallet - Coupon</title>
+    <link rel="stylesheet" href="retail-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="google-wallet">
+    <div class="wallet-container">
+        <!-- Header -->
+        <div class="wallet-header google-header">
+            <button class="back-btn" onclick="history.back()">←</button>
+            <h1>Save to Google Wallet</h1>
+            <button class="menu-btn">⋮</button>
+        </div>
+
+        <!-- Coupon Preview -->
+        <div class="card-preview google-style">
+            <div class="coupon-pass google-card">
+                <div class="pass-header">
+                    <div class="store-info">
+                        <div class="store-logo-small">
+                            <svg width="24" height="24" viewBox="0 0 40 40" fill="none">
+                                <rect width="40" height="40" rx="12" fill="white"/>
+                                <path d="M12 15h16v2H12v-2zm0 4h16v2H12v-2zm0 4h12v2H12v-2z" fill="#FF6B35"/>
+                            </svg>
+                        </div>
+                        <div class="store-details">
+                            <h3>StyleHaven Boutique</h3>
+                            <p>Premium Shopping</p>
+                        </div>
+                    </div>
+                    <div class="savings-badge">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="discount-main google-discount">
+                    <div class="discount-percent">20%</div>
+                    <div class="discount-label">OFF</div>
+                </div>
+                
+                <div class="coupon-details">
+                    <h4>Exclusive Store Discount</h4>
+                    <p>Valid on all items in-store and online</p>
+                </div>
+                
+                <div class="pass-footer">
+                    <div class="coupon-code">SAVE20</div>
+                    <div class="expiry-date">Expires 12/31/25</div>
+                </div>
+                
+                <div class="qr-mini google-qr">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="white">
+                        <rect width="4" height="4" x="2" y="2"/>
+                        <rect width="4" height="4" x="10" y="2"/>
+                        <rect width="4" height="4" x="18" y="2"/>
+                        <rect width="4" height="4" x="26" y="2"/>
+                        <rect width="4" height="4" x="2" y="10"/>
+                        <rect width="4" height="4" x="18" y="10"/>
+                        <rect width="4" height="4" x="26" y="10"/>
+                        <rect width="4" height="4" x="10" y="18"/>
+                        <rect width="4" height="4" x="2" y="26"/>
+                        <rect width="4" height="4" x="18" y="26"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Button -->
+        <div class="action-section google-actions">
+            <button class="add-wallet-btn google-btn" onclick="simulateGoogleAdd()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M21.8 10h-9.8v4h5.9c-.3 1.5-1.8 4-5.9 4-3.6 0-6.5-3-6.5-6.5s2.9-6.5 6.5-6.5c2 0 3.4.9 4.2 1.6l3.2-3.1c-2-1.9-4.7-3-7.4-3-6.1 0-11 4.9-11 11s4.9 11 11 11c6.4 0 10.7-4.5 10.7-10.8 0-.7-.1-1.2-.2-1.7z"/>
+                </svg>
+                Save Coupon to Google Wallet
+            </button>
+            
+            <div class="security-features">
+                <div class="feature">
+                    <span class="icon">🎁</span>
+                    <span>Auto-apply at checkout</span>
+                </div>
+                <div class="feature">
+                    <span class="icon">📍</span>
+                    <span>Location reminders</span>
+                </div>
+                <div class="feature">
+                    <span class="icon">⏰</span>
+                    <span>Expiration alerts</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function simulateGoogleAdd() {
+            const btn = document.querySelector('.add-wallet-btn');
+            btn.textContent = 'Saving Coupon...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.innerHTML = '✓ Coupon Saved to Google Wallet';
+                btn.style.background = '#34A853';
+                
+                setTimeout(() => {
+                    alert('20% off coupon successfully saved to Google Wallet! (Demo simulation)');
+                }, 1000);
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Apple Wallet - MetroCom Offer</title>
+    <link rel="stylesheet" href="telco-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="apple-wallet">
+    <div class="wallet-container">
+        <!-- Header -->
+        <div class="wallet-header">
+            <button class="back-btn" onclick="history.back()">‹</button>
+            <h1>Add to Apple Wallet</h1>
+            <div></div>
+        </div>
+
+        <!-- Offer Preview -->
+        <div class="card-preview">
+            <div class="offer-pass apple-style">
+                <div class="pass-header">
+                    <div class="carrier-info">
+                        <div class="carrier-logo-small">
+                            <svg width="24" height="24" viewBox="0 0 40 40" fill="none">
+                                <rect width="40" height="40" rx="12" fill="white"/>
+                                <circle cx="20" cy="20" r="8" fill="#0066FF"/>
+                                <circle cx="20" cy="20" r="4" fill="white"/>
+                                <rect width="2" height="8" x="8" y="16" fill="#0066FF" rx="1"/>
+                                <rect width="2" height="6" x="30" y="17" fill="#0066FF" rx="1"/>
+                                <rect width="2" height="4" x="34" y="18" fill="#0066FF" rx="1"/>
+                            </svg>
+                        </div>
+                        <div class="carrier-details">
+                            <h3>MetroCom</h3>
+                            <p>Wireless & Beyond</p>
+                        </div>
+                    </div>
+                    <div class="pass-type">OFFER</div>
+                </div>
+                
+                <div class="discount-main">
+                    <div class="discount-percent">20%</div>
+                    <div class="discount-label">OFF</div>
+                </div>
+                
+                <div class="offer-details">
+                    <h4>6-Month Plan Discount</h4>
+                    <p>Unlimited 5G • Free hotspot • No contract</p>
+                </div>
+                
+                <div class="pass-footer">
+                    <div class="offer-code">Code: SAVE20MC</div>
+                    <div class="expiry-date">Exp: 12/31/25</div>
+                </div>
+                
+                <div class="signal-icon">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="white" opacity="0.3">
+                        <rect width="4" height="8" x="8" y="24"/>
+                        <rect width="4" height="12" x="16" y="20"/>
+                        <rect width="4" height="16" x="24" y="16"/>
+                        <rect width="4" height="20" x="32" y="12"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Button -->
+        <div class="action-section">
+            <button class="add-wallet-btn" onclick="simulateAdd()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                </svg>
+                Add Offer to Apple Wallet
+            </button>
+            
+            <p class="security-note">
+                📞 Offer will automatically apply when you upgrade or renew
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function simulateAdd() {
+            const btn = document.querySelector('.add-wallet-btn');
+            btn.textContent = 'Adding Offer...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.innerHTML = '✓ Offer Added to Apple Wallet';
+                btn.style.background = '#34C759';
+                
+                setTimeout(() => {
+                    alert('MetroCom 20% off offer successfully added to Apple Wallet! (Demo simulation)');
+                }, 1000);
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

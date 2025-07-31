@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save to Google Wallet - MetroCom Offer</title>
+    <link rel="stylesheet" href="telco-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="google-wallet">
+    <div class="wallet-container">
+        <!-- Header -->
+        <div class="wallet-header google-header">
+            <button class="back-btn" onclick="history.back()">←</button>
+            <h1>Save to Google Wallet</h1>
+            <button class="menu-btn">⋮</button>
+        </div>
+
+        <!-- Offer Preview -->
+        <div class="card-preview google-style">
+            <div class="offer-pass google-card">
+                <div class="pass-header">
+                    <div class="carrier-info">
+                        <div class="carrier-logo-small">
+                            <svg width="24" height="24" viewBox="0 0 40 40" fill="none">
+                                <rect width="40" height="40" rx="12" fill="white"/>
+                                <circle cx="20" cy="20" r="8" fill="#0066FF"/>
+                                <circle cx="20" cy="20" r="4" fill="white"/>
+                                <rect width="2" height="8" x="8" y="16" fill="#0066FF" rx="1"/>
+                                <rect width="2" height="6" x="30" y="17" fill="#0066FF" rx="1"/>
+                                <rect width="2" height="4" x="34" y="18" fill="#0066FF" rx="1"/>
+                            </svg>
+                        </div>
+                        <div class="carrier-details">
+                            <h3>MetroCom</h3>
+                            <p>Wireless & Beyond</p>
+                        </div>
+                    </div>
+                    <div class="network-badge">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                            <path d="M2 17h20v2H2zm1.15-4.05L4 11.47l.85 1.48L3.15 12.95zM6.53 10.47l.85 1.48 1.48-.85-.85-1.48L6.53 10.47zm3.38-1.95l.85 1.48 1.48-.85-.85-1.48L9.91 8.52zm3.38-1.95l.85 1.48 1.48-.85-.85-1.48L13.29 6.57z"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="discount-main google-discount">
+                    <div class="discount-percent">20%</div>
+                    <div class="discount-label">OFF</div>
+                </div>
+                
+                <div class="offer-details">
+                    <h4>6-Month Plan Discount</h4>
+                    <p>Unlimited 5G • Free hotspot • No contract</p>
+                </div>
+                
+                <div class="pass-footer">
+                    <div class="offer-code">SAVE20MC</div>
+                    <div class="expiry-date">Expires 12/31/25</div>
+                </div>
+                
+                <div class="signal-icon google-signal">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="white" opacity="0.4">
+                        <rect width="3" height="6" x="6" y="20"/>
+                        <rect width="3" height="10" x="12" y="16"/>
+                        <rect width="3" height="14" x="18" y="12"/>
+                        <rect width="3" height="18" x="24" y="8"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Button -->
+        <div class="action-section google-actions">
+            <button class="add-wallet-btn google-btn" onclick="simulateGoogleAdd()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M21.8 10h-9.8v4h5.9c-.3 1.5-1.8 4-5.9 4-3.6 0-6.5-3-6.5-6.5s2.9-6.5 6.5-6.5c2 0 3.4.9 4.2 1.6l3.2-3.1c-2-1.9-4.7-3-7.4-3-6.1 0-11 4.9-11 11s4.9 11 11 11c6.4 0 10.7-4.5 10.7-10.8 0-.7-.1-1.2-.2-1.7z"/>
+                </svg>
+                Save Offer to Google Wallet
+            </button>
+            
+            <div class="security-features">
+                <div class="feature">
+                    <span class="icon">📞</span>
+                    <span>Auto-apply discount</span>
+                </div>
+                <div class="feature">
+                    <span class="icon">📍</span>
+                    <span>Store location alerts</span>
+                </div>
+                <div class="feature">
+                    <span class="icon">⏰</span>
+                    <span>Renewal reminders</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function simulateGoogleAdd() {
+            const btn = document.querySelector('.add-wallet-btn');
+            btn.textContent = 'Saving Offer...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.innerHTML = '✓ Offer Saved to Google Wallet';
+                btn.style.background = '#34A853';
+                
+                setTimeout(() => {
+                    alert('MetroCom 20% off offer successfully saved to Google Wallet! (Demo simulation)');
+                }, 1000);
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
