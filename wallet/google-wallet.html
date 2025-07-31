@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Google Wallet</title>
+    <link rel="stylesheet" href="wallet-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="google-wallet">
+    <div class="wallet-container">
+        <!-- Status Bar -->
+        <div class="status-bar android">
+            <div class="status-left">
+                <span class="time">9:41</span>
+            </div>
+            <div class="status-right">
+                <div class="signal-bars">
+                    <span></span><span></span><span></span><span></span>
+                </div>
+                <span class="wifi">📶</span>
+                <span class="battery">85%</span>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <div class="wallet-header google-header">
+            <button class="back-btn" onclick="history.back()">←</button>
+            <h1>Add to Google Wallet</h1>
+            <button class="menu-btn">⋮</button>
+        </div>
+
+        <!-- Card Preview -->
+        <div class="card-preview google-style">
+            <div class="bank-card google-card">
+                <div class="card-header">
+                    <div class="bank-logo">
+                        <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                            <rect width="32" height="32" rx="8" fill="white"/>
+                            <path d="M8 12h16v8H8V12z" fill="#1B365D"/>
+                            <path d="M10 14h12v4H10v-4z" fill="white"/>
+                        </svg>
+                        <span>SecureBank</span>
+                    </div>
+                    <div class="contactless">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <div class="card-number">
+                    •••• •••• •••• 4129
+                </div>
+                
+                <div class="card-footer">
+                    <div class="cardholder">JOHN DOE</div>
+                    <div class="expiry">12/28</div>
+                </div>
+                
+                <div class="card-brand">
+                    <svg width="60" height="40" viewBox="0 0 60 40" fill="white">
+                        <text x="30" y="25" text-anchor="middle" fill="white" font-size="12" font-weight="bold">VISA</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- QR Code Section -->
+        <div class="qr-section google-qr">
+            <div class="section-header">
+                <h2>Quick Setup</h2>
+                <p>Scan the QR code below to add your card</p>
+            </div>
+            
+            <div class="qr-code-container google-qr-container">
+                <div class="qr-code google-qr-style">
+                    <!-- Google-style QR Code -->
+                    <div class="qr-pattern google-pattern">
+                        <div class="qr-row">
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                        </div>
+                        <div class="qr-row">
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                        </div>
+                        <div class="qr-row">
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                        </div>
+                        <div class="qr-row">
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                        </div>
+                        <div class="qr-row">
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                        </div>
+                        <div class="qr-row">
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block"></div>
+                        </div>
+                        <div class="qr-row">
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                        </div>
+                        <div class="qr-row">
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                        </div>
+                        <div class="qr-row">
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                        </div>
+                        <div class="qr-row">
+                            <div class="qr-block"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="google-logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#4285F4">
+                        <path d="M21.8 10h-9.8v4h5.9c-.3 1.5-1.8 4-5.9 4-3.6 0-6.5-3-6.5-6.5s2.9-6.5 6.5-6.5c2 0 3.4.9 4.2 1.6l3.2-3.1c-2-1.9-4.7-3-7.4-3-6.1 0-11 4.9-11 11s4.9 11 11 11c6.4 0 10.7-4.5 10.7-10.8 0-.7-.1-1.2-.2-1.7z"/>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="scan-instructions">
+                <div class="instruction-item">
+                    <span class="step">1</span>
+                    <p>Open your camera app</p>
+                </div>
+                <div class="instruction-item">
+                    <span class="step">2</span>
+                    <p>Point at the QR code</p>
+                </div>
+                <div class="instruction-item">
+                    <span class="step">3</span>
+                    <p>Tap the notification</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Button -->
+        <div class="action-section google-actions">
+            <button class="add-wallet-btn google-btn" onclick="simulateGoogleAdd()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M21.8 10h-9.8v4h5.9c-.3 1.5-1.8 4-5.9 4-3.6 0-6.5-3-6.5-6.5s2.9-6.5 6.5-6.5c2 0 3.4.9 4.2 1.6l3.2-3.1c-2-1.9-4.7-3-7.4-3-6.1 0-11 4.9-11 11s4.9 11 11 11c6.4 0 10.7-4.5 10.7-10.8 0-.7-.1-1.2-.2-1.7z"/>
+                </svg>
+                Add to Google Wallet
+            </button>
+            
+            <button class="manual-entry-btn">Enter card details manually</button>
+            
+            <div class="security-features">
+                <div class="feature">
+                    <span class="icon">🔒</span>
+                    <span>Bank-level security</span>
+                </div>
+                <div class="feature">
+                    <span class="icon">📱</span>
+                    <span>Contactless payments</span>
+                </div>
+                <div class="feature">
+                    <span class="icon">🔔</span>
+                    <span>Real-time notifications</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function simulateGoogleAdd() {
+            const btn = document.querySelector('.add-wallet-btn');
+            btn.textContent = 'Adding to Wallet...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.innerHTML = '✓ Added to Google Wallet';
+                btn.style.background = '#34A853';
+                
+                setTimeout(() => {
+                    alert('Card successfully added to Google Wallet! (Demo simulation)');
+                }, 1000);
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

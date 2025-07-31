@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Apple Wallet</title>
+    <link rel="stylesheet" href="wallet-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="apple-wallet">
+    <div class="wallet-container">
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <div class="status-left">
+                <span class="time">9:41</span>
+            </div>
+            <div class="status-right">
+                <div class="signal-bars">
+                    <span></span><span></span><span></span><span></span>
+                </div>
+                <span class="wifi">📶</span>
+                <span class="battery">🔋</span>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <div class="wallet-header">
+            <button class="back-btn" onclick="history.back()">‹</button>
+            <h1>Add to Wallet</h1>
+            <div></div>
+        </div>
+
+        <!-- Card Preview -->
+        <div class="card-preview">
+            <div class="bank-card apple-style">
+                <div class="card-header">
+                    <div class="bank-logo">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect width="32" height="32" rx="8" fill="white"/>
+                            <path d="M8 12h16v8H8V12z" fill="#1B365D"/>
+                            <path d="M10 14h12v4H10v-4z" fill="white"/>
+                        </svg>
+                        <span>SecureBank</span>
+                    </div>
+                    <div class="card-type">DEBIT</div>
+                </div>
+                
+                <div class="card-number">
+                    •••• •••• •••• 4129
+                </div>
+                
+                <div class="card-footer">
+                    <div class="cardholder">JOHN DOE</div>
+                    <div class="expiry">12/28</div>
+                </div>
+                
+                <div class="card-brand">
+                    <svg width="60" height="40" viewBox="0 0 60 40" fill="white">
+                        <rect width="60" height="40" rx="4" fill="none" stroke="white" stroke-width="2"/>
+                        <text x="30" y="25" text-anchor="middle" fill="white" font-size="12" font-weight="bold">VISA</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- QR Code Section -->
+        <div class="qr-section">
+            <h2>Scan to Add Card</h2>
+            <p>Use your iPhone camera to scan this QR code and add your SecureBank card to Apple Wallet</p>
+            
+            <div class="qr-code-container">
+                <div class="qr-code">
+                    <!-- Mock QR Code using CSS patterns -->
+                    <div class="qr-pattern">
+                        <div class="qr-row">
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                        </div>
+                        <div class="qr-row">
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                        </div>
+                        <div class="qr-row">
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                        </div>
+                        <div class="qr-row">
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                        </div>
+                        <div class="qr-row">
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                        </div>
+                        <div class="qr-row">
+                            <div class="qr-block"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                        </div>
+                        <div class="qr-row">
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                        </div>
+                        <div class="qr-row">
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                        </div>
+                        <div class="qr-row">
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block"></div>
+                        </div>
+                        <div class="qr-row">
+                            <div class="qr-block"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block"></div>
+                            <div class="qr-block filled"></div>
+                            <div class="qr-block filled"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="qr-note">Position your iPhone camera over the QR code</p>
+        </div>
+
+        <!-- Add Button -->
+        <div class="action-section">
+            <button class="add-wallet-btn" onclick="simulateAdd()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                </svg>
+                Add to Apple Wallet
+            </button>
+            
+            <p class="security-note">
+                🔒 Your card information is protected with end-to-end encryption
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function simulateAdd() {
+            const btn = document.querySelector('.add-wallet-btn');
+            btn.textContent = 'Adding to Wallet...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.innerHTML = '✓ Added to Apple Wallet';
+                btn.style.background = '#34C759';
+                
+                setTimeout(() => {
+                    alert('Card successfully added to Apple Wallet! (Demo simulation)');
+                }, 1000);
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
