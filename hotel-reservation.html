@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Luxe - Book Your Stay</title>
+    <link rel="stylesheet" href="hotel-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="8" fill="#D4AF37"/>
+                    <path d="M8 10h16v12H8V10z" fill="white"/>
+                    <path d="M10 12h12v2H10v-2z" fill="#D4AF37"/>
+                    <path d="M10 16h12v2H10v-2z" fill="#D4AF37"/>
+                    <path d="M10 20h12v2H10v-2z" fill="#D4AF37"/>
+                    <circle cx="20" cy="14" r="1" fill="white"/>
+                </svg>
+                <span class="logo-text">Hotel Luxe</span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <div class="reservation-card">
+                <div class="reservation-header">
+                    <h1>Book Your Stay</h1>
+                    <p>Reserve your perfect room today</p>
+                </div>
+
+                <form class="reservation-form" onsubmit="handleReservation(event)">
+                    <div class="form-group">
+                        <label for="guest-name">Guest Name</label>
+                        <input type="text" id="guest-name" name="guest-name" placeholder="John Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567" required>
+                    </div>
+
+                    <div class="date-group">
+                        <div class="form-group half">
+                            <label for="check-in">Check-in Date</label>
+                            <input type="date" id="check-in" name="check-in" required>
+                        </div>
+                        <div class="form-group half">
+                            <label for="check-out">Check-out Date</label>
+                            <input type="date" id="check-out" name="check-out" required>
+                        </div>
+                    </div>
+
+                    <div class="guest-group">
+                        <div class="form-group half">
+                            <label for="adults">Adults</label>
+                            <select id="adults" name="adults" required>
+                                <option value="1">1 Adult</option>
+                                <option value="2" selected>2 Adults</option>
+                                <option value="3">3 Adults</option>
+                                <option value="4">4 Adults</option>
+                            </select>
+                        </div>
+                        <div class="form-group half">
+                            <label for="children">Children</label>
+                            <select id="children" name="children">
+                                <option value="0" selected>0 Children</option>
+                                <option value="1">1 Child</option>
+                                <option value="2">2 Children</option>
+                                <option value="3">3 Children</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="room-type">Room Type</label>
+                        <select id="room-type" name="room-type" required>
+                            <option value="">Select Room Type</option>
+                            <option value="standard">Standard Room - $120/night</option>
+                            <option value="deluxe">Deluxe Room - $180/night</option>
+                            <option value="suite">Executive Suite - $280/night</option>
+                            <option value="presidential">Presidential Suite - $450/night</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="special-requests">Special Requests (Optional)</label>
+                        <textarea id="special-requests" name="special-requests" placeholder="Late check-in, room preferences, dietary requirements..." rows="3"></textarea>
+                    </div>
+
+                    <div class="price-summary">
+                        <div class="price-row">
+                            <span>Room Rate (per night)</span>
+                            <span id="room-rate">$0</span>
+                        </div>
+                        <div class="price-row">
+                            <span>Number of Nights</span>
+                            <span id="night-count">0</span>
+                        </div>
+                        <div class="price-row">
+                            <span>Taxes & Fees</span>
+                            <span id="taxes">$0</span>
+                        </div>
+                        <div class="price-row total">
+                            <span>Total Amount</span>
+                            <span id="total-price">$0</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="reserve-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 11l3 3L22 4"></path>
+                            <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path>
+                        </svg>
+                        Reserve Now
+                    </button>
+                </form>
+
+                <div class="features">
+                    <div class="feature">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4"></path>
+                            <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9c2.03 0 3.88.67 5.38 1.82"></path>
+                        </svg>
+                        Free Cancellation
+                    </div>
+                    <div class="feature">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5"></path>
+                            <path d="M2 12l10 5 10-5"></path>
+                        </svg>
+                        Best Price Guarantee
+                    </div>
+                    <div class="feature">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path>
+                        </svg>
+                        24/7 Support
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 Hotel Luxe. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Set minimum date to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('check-in').min = today;
+        document.getElementById('check-out').min = today;
+
+        // Update check-out minimum when check-in changes
+        document.getElementById('check-in').addEventListener('change', function() {
+            const checkInDate = new Date(this.value);
+            checkInDate.setDate(checkInDate.getDate() + 1);
+            document.getElementById('check-out').min = checkInDate.toISOString().split('T')[0];
+            calculatePrice();
+        });
+
+        document.getElementById('check-out').addEventListener('change', calculatePrice);
+        document.getElementById('room-type').addEventListener('change', calculatePrice);
+
+        function calculatePrice() {
+            const checkIn = document.getElementById('check-in').value;
+            const checkOut = document.getElementById('check-out').value;
+            const roomType = document.getElementById('room-type').value;
+
+            if (!checkIn || !checkOut || !roomType) {
+                document.getElementById('room-rate').textContent = '$0';
+                document.getElementById('night-count').textContent = '0';
+                document.getElementById('taxes').textContent = '$0';
+                document.getElementById('total-price').textContent = '$0';
+                return;
+            }
+
+            const roomRates = {
+                'standard': 120,
+                'deluxe': 180,
+                'suite': 280,
+                'presidential': 450
+            };
+
+            const rate = roomRates[roomType];
+            const nights = Math.ceil((new Date(checkOut) - new Date(checkIn)) / (1000 * 60 * 60 * 24));
+            const subtotal = rate * nights;
+            const taxes = Math.round(subtotal * 0.15);
+            const total = subtotal + taxes;
+
+            document.getElementById('room-rate').textContent = `$${rate}`;
+            document.getElementById('night-count').textContent = nights;
+            document.getElementById('taxes').textContent = `$${taxes}`;
+            document.getElementById('total-price').textContent = `$${total}`;
+        }
+
+        function handleReservation(event) {
+            event.preventDefault();
+            
+            // Simple validation
+            const form = event.target;
+            const formData = new FormData(form);
+            
+            alert('Thank you for your reservation! A confirmation email will be sent to ' + formData.get('email'));
+        }
+    </script>
+</body>
+</html>

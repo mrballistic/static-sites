@@ -1,0 +1,322 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #8B5A3C 0%, #D4AF37 50%, #8B5A3C 100%);
+    min-height: 100vh;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: white;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* Main Content */
+.main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.reservation-card {
+    background: white;
+    border-radius: 16px;
+    padding: 32px 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 380px;
+}
+
+.reservation-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.reservation-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #8B4513;
+    margin-bottom: 8px;
+}
+
+.reservation-header p {
+    color: #6B7280;
+    font-size: 16px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group.half {
+    width: calc(50% - 10px);
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.form-group.half:first-child {
+    margin-right: 20px;
+}
+
+.date-group, .guest-group {
+    display: flex;
+    gap: 20px;
+}
+
+.date-group .form-group, .guest-group .form-group {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #374151;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 16px;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: all 0.2s ease;
+    background: #F9FAFB;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #D4AF37;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9CA3AF;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+/* Price Summary */
+.price-summary {
+    background: #F8F9FA;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 24px 0;
+    border: 2px solid #E5E7EB;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.price-row:last-child {
+    margin-bottom: 0;
+}
+
+.price-row.total {
+    border-top: 2px solid #E5E7EB;
+    padding-top: 12px;
+    margin-top: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #8B4513;
+}
+
+.price-row span:last-child {
+    font-weight: 500;
+    color: #374151;
+}
+
+.price-row.total span:last-child {
+    color: #D4AF37;
+    font-weight: 700;
+}
+
+/* Button */
+.reserve-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #D4AF37 0%, #B8941F 100%);
+    color: white;
+    border: none;
+    padding: 18px 24px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.reserve-btn:hover {
+    background: linear-gradient(135deg, #B8941F 0%, #9A7A1A 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+}
+
+.reserve-btn:active {
+    transform: translateY(0);
+}
+
+/* Features */
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: #6B7280;
+    padding: 8px 0;
+}
+
+.feature svg {
+    color: #D4AF37;
+    flex-shrink: 0;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .reservation-card {
+        padding: 24px 20px;
+    }
+    
+    .date-group, .guest-group {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .date-group .form-group, .guest-group .form-group {
+        margin-bottom: 20px;
+    }
+    
+    .features {
+        gap: 8px;
+    }
+    
+    .feature {
+        font-size: 13px;
+        padding: 6px 0;
+    }
+    
+    .reservation-header h1 {
+        font-size: 24px;
+    }
+    
+    .reservation-header p {
+        font-size: 14px;
+    }
+}
+
+/* Animation for smooth loading */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reservation-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Custom styling for date inputs */
+input[type="date"] {
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: #D4AF37;
+    cursor: pointer;
+}
+
+/* Custom select styling */
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D4AF37' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 16px;
+    padding-right: 48px;
+}
