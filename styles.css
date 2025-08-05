@@ -1,4 +1,8 @@
 /* Reset and Base Styles */
+html {
+    height: 100%;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +12,9 @@
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-attachment: fixed;
     min-height: 100vh;
+    height: 100%;
     color: #333;
     line-height: 1.6;
 }
