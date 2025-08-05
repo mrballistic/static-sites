@@ -101,11 +101,12 @@ body {
 .date-group, .guest-group {
     display: flex;
     gap: 20px;
+    margin-bottom: 20px;
 }
 
 .date-group .form-group, .guest-group .form-group {
     flex: 1;
-    margin-bottom: 20px;
+    margin-bottom: 0;
 }
 
 .form-group label {
@@ -325,4 +326,44 @@ select {
     background-position: right 16px center;
     background-size: 16px;
     padding-right: 48px;
+}
+
+/* Digital Wallet Section */
+.digital-wallet-section {
+    text-align: center;
+    margin-top: 24px;
+    padding: 20px;
+    background: rgba(212, 175, 55, 0.1);
+    border-radius: 12px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.wallet-text {
+    color: #6B7280;
+    font-size: 14px;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.wallet-btn {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: rgba(212, 175, 55, 0.1);
+    color: #D4AF37;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.wallet-btn:hover {
+    background: rgba(212, 175, 55, 0.2);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(212, 175, 55, 0.2);
 }
