@@ -161,7 +161,7 @@
                 btn.style.background = '#34A853';
                 
                 setTimeout(() => {
-                    alert('🗝️ Digital room key successfully added to your wallet!\n\nYou can now:\n• Unlock room 1205 with your phone\n• Access the key from your wallet app\n• Use contactless entry');
+                    // Digital room key successfully added - no popup needed
                     btn.innerHTML = originalText;
                     btn.style.background = '';
                     btn.disabled = false;
@@ -181,7 +181,7 @@
                 btn.style.background = '#34A853';
                 
                 setTimeout(() => {
-                    alert('📱 QR Code successfully added to your wallet!\n\nYou can now:\n• Show QR code for quick check-in\n• Access reservation details offline\n• Share with travel companions');
+                    // QR Code successfully added - no popup needed
                     btn.innerHTML = originalText;
                     btn.style.background = '';
                     btn.disabled = false;
@@ -190,7 +190,7 @@
         }
 
         function viewServices() {
-            alert('Hotel Services:\n\n🍽️ Room Service (24/7)\n🧖‍♂️ Concierge\n🏊‍♀️ Pool & Spa\n🍷 Restaurant & Bar\n🚗 Valet Parking\n💼 Business Center');
+            // Hotel services viewed - no popup needed
         }
 
         // Initialize QR code when page loads
