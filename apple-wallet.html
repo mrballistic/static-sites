@@ -57,6 +57,9 @@
                 </svg>
                 Add to Apple Wallet
             </button>
+            <div id="apple-wallet-message" style="display:none; margin-top: 0.5em; color: #1B365D; font-weight: 500; background: #e6f0fa; border-radius: 4px; padding: 0.5em 1em;">
+                Close the window to return to chat
+            </div>
             
             <p class="security-note">
                 🔒 Your card information is protected with end-to-end encryption
@@ -69,13 +72,16 @@
             const btn = document.querySelector('.add-wallet-btn');
             btn.textContent = 'Adding to Wallet...';
             btn.disabled = true;
-            
+            const message = document.getElementById('apple-wallet-message');
+            if (message) message.style.display = 'none';
             setTimeout(() => {
                 btn.innerHTML = '✓ Added to Apple Wallet';
                 btn.style.background = '#34C759';
-                
                 setTimeout(() => {
-                   alert('Close the window to return to chat');
+                    if (message) {
+                        message.style.display = 'block';
+                        message.setAttribute('aria-live', 'polite');
+                    }
                 }, 1000);
             }, 2000);
         }

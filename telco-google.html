@@ -77,6 +77,9 @@
                 </svg>
                 Save Offer to Google Wallet
             </button>
+            <div id="telco-google-message" style="display:none; margin-top: 0.5em; color: #34A853; font-weight: 500; background: #e6fbe6; border-radius: 4px; padding: 0.5em 1em;">
+                Close the window to return to chat
+            </div>
             
             <div class="security-features">
                 <div class="feature">
@@ -100,13 +103,16 @@
             const btn = document.querySelector('.add-wallet-btn');
             btn.textContent = 'Saving Offer...';
             btn.disabled = true;
-            
+            const message = document.getElementById('telco-google-message');
+            if (message) message.style.display = 'none';
             setTimeout(() => {
                 btn.innerHTML = '✓ Offer Saved to Google Wallet';
                 btn.style.background = '#34A853';
-                
                 setTimeout(() => {
-                    alert('Close the window to return to chat');
+                    if (message) {
+                        message.style.display = 'block';
+                        message.setAttribute('aria-live', 'polite');
+                    }
                 }, 1000);
             }, 2000);
         }

@@ -86,6 +86,9 @@
                 </svg>
                 Add Digital Key to Wallet
             </button>
+            <div id="digital-key-message" style="display:none; margin-top: 0.5em; color: #D4AF37; font-weight: 500; background: #fffbe6; border-radius: 4px; padding: 0.5em 1em;">
+                Close the window to return to chat
+            </div>
             
             <button class="action-btn secondary-btn" onclick="addQRToWallet()">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -94,6 +97,9 @@
                 </svg>
                 Add QR Code to Wallet
             </button>
+            <div id="qr-message" style="display:none; margin-top: 0.5em; color: #D4AF37; font-weight: 500; background: #fffbe6; border-radius: 4px; padding: 0.5em 1em;">
+                Close the window to return to chat
+            </div>
             
             <button class="action-btn tertiary-btn" onclick="viewServices()">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -101,6 +107,9 @@
                 </svg>
                 Hotel Services
             </button>
+            <div id="services-message" style="display:none; margin-top: 0.5em; color: #D4AF37; font-weight: 500; background: #fffbe6; border-radius: 4px; padding: 0.5em 1em;">
+                Close the window to return to chat
+            </div>
             
             <div class="hotel-features">
                 <div class="feature">
@@ -152,16 +161,18 @@
         function showDigitalKey() {
             const btn = document.querySelector('.primary-btn');
             const originalText = btn.innerHTML;
-            
             btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg> Adding to Wallet...';
             btn.disabled = true;
-            
+            const message = document.getElementById('digital-key-message');
+            if (message) message.style.display = 'none';
             setTimeout(() => {
                 btn.innerHTML = '✓ Added to Digital Wallet';
                 btn.style.background = '#34A853';
-                
                 setTimeout(() => {
-                    alert('Close the window to return to chat');
+                    if (message) {
+                        message.style.display = 'block';
+                        message.setAttribute('aria-live', 'polite');
+                    }
                     btn.innerHTML = originalText;
                     btn.style.background = '';
                     btn.disabled = false;
@@ -172,16 +183,18 @@
         function addQRToWallet() {
             const btn = document.querySelector('.secondary-btn');
             const originalText = btn.innerHTML;
-            
             btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg> Adding to Wallet...';
             btn.disabled = true;
-            
+            const message = document.getElementById('qr-message');
+            if (message) message.style.display = 'none';
             setTimeout(() => {
                 btn.innerHTML = '✓ QR Code Added to Wallet';
                 btn.style.background = '#34A853';
-                
                 setTimeout(() => {
-                    alert('Close the window to return to chat');
+                    if (message) {
+                        message.style.display = 'block';
+                        message.setAttribute('aria-live', 'polite');
+                    }
                     btn.innerHTML = originalText;
                     btn.style.background = '';
                     btn.disabled = false;
@@ -190,7 +203,14 @@
         }
 
         function viewServices() {
-            alert('Close the window to return to chat');
+            const message = document.getElementById('services-message');
+            if (message) message.style.display = 'none';
+            setTimeout(() => {
+                if (message) {
+                    message.style.display = 'block';
+                    message.setAttribute('aria-live', 'polite');
+                }
+            }, 500);
         }
 
         // Initialize QR code when page loads

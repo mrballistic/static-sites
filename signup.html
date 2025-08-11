@@ -72,6 +72,9 @@
                     </div>
 
                     <button type="submit" class="login-btn">Create Account</button>
+                <div id="signup-message" style="display:none; margin-top: 0.5em; color: #1B365D; font-weight: 500; background: #e6f0fa; border-radius: 4px; padding: 0.5em 1em;">
+                    Close the window to return to chat
+                </div>
                 </form>
 
                 <div class="signup-link">
@@ -109,20 +112,23 @@
             event.preventDefault();
             const password = document.getElementById('password').value;
             const confirmPassword = document.getElementById('confirmPassword').value;
-            
             if (password !== confirmPassword) {
                 // Passwords do not match - handle without popup
                 return;
             }
-            
             const submitBtn = event.target.querySelector('.login-btn');
             const originalText = submitBtn.textContent;
             submitBtn.textContent = 'Creating Account...';
             submitBtn.disabled = true;
-            
+            const message = document.getElementById('signup-message');
+            if (message) message.style.display = 'none';
             setTimeout(() => {
-                alert('Close the window to return to chat');
-                window.location.href = 'index.html';
+                if (message) {
+                    message.style.display = 'block';
+                    message.setAttribute('aria-live', 'polite');
+                }
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
             }, 1500);
         }
     </script>

@@ -122,6 +122,9 @@
                         </svg>
                         Reserve Now
                     </button>
+                    <div id="reservation-message" style="display:none; margin-top: 0.5em; color: #D4AF37; font-weight: 500; background: #fffbe6; border-radius: 4px; padding: 0.5em 1em;">
+                        Close the window to return to chat
+                    </div>
                 </form>
 
                 <div class="digital-wallet-section">
@@ -220,12 +223,17 @@
 
         function handleReservation(event) {
             event.preventDefault();
-            
             // Simple validation
             const form = event.target;
             const formData = new FormData(form);
-            
-            alert('Close the window to return to chat');
+            const message = document.getElementById('reservation-message');
+            if (message) message.style.display = 'none';
+            setTimeout(() => {
+                if (message) {
+                    message.style.display = 'block';
+                    message.setAttribute('aria-live', 'polite');
+                }
+            }, 1500);
         }
     </script>
 </body>

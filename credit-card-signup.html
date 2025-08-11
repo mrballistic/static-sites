@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for a Credit Card - SecureBank</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .credit-card-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 24px 0 0 0;
+        }
+        .credit-card-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+        .credit-card-header .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .credit-card-header .logo-text {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #1B365D;
+        }
+        .credit-card-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #1B365D;
+        }
+        .credit-card-desc {
+            color: #374151;
+            font-size: 1rem;
+            margin-bottom: 24px;
+        }
+        .credit-card-form {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 2px 16px rgba(27,54,93,0.07);
+            padding: 24px 20px 20px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+        .credit-card-form label {
+            font-size: 0.97rem;
+            font-weight: 600;
+            color: #14294b;
+            margin-bottom: 4px;
+            letter-spacing: 0.01em;
+        }
+        .credit-card-form input, .credit-card-form select {
+            height: 36px;
+            border: 1.5px solid #374151;
+            border-radius: 8px;
+            padding: 0 8px;
+            font-size: 0.96rem;
+            font-family: inherit;
+            background: #fff;
+            color: #1B365D;
+            font-weight: 500;
+            transition: border 0.2s;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .credit-card-form input:focus, .credit-card-form select:focus {
+            border-color: #1B365D;
+            outline: 2px solid #1B365D;
+        }
+        .credit-card-form input::placeholder {
+            color: #4B5563;
+            opacity: 1;
+        }
+        .credit-card-form .form-row {
+            display: flex;
+            gap: 12px;
+        }
+        .credit-card-form .form-row .half {
+            flex: 1;
+            min-width: 0;
+        }
+        .credit-card-form .submit-btn {
+            background: #1B365D;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 8px;
+            height: 48px;
+            margin-top: 8px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .credit-card-form .submit-btn:active {
+            background: #14294b;
+        }
+        .credit-card-form .submit-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+        .credit-card-footer {
+            margin-top: 32px;
+            text-align: center;
+            color: #6b7280;
+            font-size: 0.95rem;
+        }
+        @media (max-width: 480px) {
+            .credit-card-container {
+                max-width: 100vw;
+                padding: 8px 0 0 0;
+            }
+            .credit-card-header {
+                margin-bottom: 16px;
+            }
+            .credit-card-title {
+                font-size: 1.15rem;
+            }
+            .credit-card-form {
+                padding: 10px 4vw 10px 4vw;
+                gap: 10px;
+            }
+            .credit-card-form label {
+                font-size: 0.93rem;
+            }
+            .credit-card-form input, .credit-card-form select {
+                height: 36px;
+                font-size: 0.93rem;
+                padding: 0 7px;
+            }
+            .credit-card-form .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            .credit-card-form .form-row .half {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            .credit-card-form .submit-btn {
+                height: 42px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="credit-card-container">
+        <div class="credit-card-header">
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="8" fill="#1B365D"/>
+                    <path d="M8 12h16v8H8V12z" fill="white"/>
+                    <path d="M10 14h12v4H10v-4z" fill="#1B365D"/>
+                </svg>
+                <span class="logo-text">SecureBank</span>
+            </div>
+        </div>
+        <h1 class="credit-card-title" style="font-size:2rem; color:#1B365D; margin-bottom:4px; letter-spacing:-0.5px;">Application</h1>
+        <h2 class="credit-card-desc" style="font-size:1.08rem; color:#222; font-weight:500; margin-bottom:20px; letter-spacing:-0.2px;">Apply for a new credit card. Fast, secure, and no annual fee.</h2>
+        <form class="credit-card-form" onsubmit="handleCreditCardSignup(event)" aria-label="Credit Card Application Form">
+            <label for="cardType">Card Type</label>
+            <select id="cardType" name="cardType" required>
+                <option value="">Select a card</option>
+                <option value="platinum">Platinum Rewards</option>
+                <option value="cashback">Cash Back</option>
+                <option value="student">Student Card</option>
+                <option value="secured">Secured Card</option>
+            </select>
+            <div class="form-row">
+                <div class="half">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" required autocomplete="given-name">
+                </div>
+                <div class="half">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" required autocomplete="family-name">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="half">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="half">
+                    <label for="ssn">SSN</label>
+                    <input type="text" id="ssn" name="ssn" maxlength="11" pattern="\d{3}-\d{2}-\d{4}" placeholder="123-45-6789" required autocomplete="off">
+                </div>
+            </div>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required autocomplete="tel">
+            <label for="address">Street Address</label>
+            <input type="text" id="address" name="address" required autocomplete="street-address">
+            <div class="form-row">
+                <div class="half">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" required autocomplete="address-level2">
+                </div>
+                <div class="half">
+                    <label for="state">State</label>
+                    <select id="state" name="state" required>
+                        <option value="">State</option>
+                        <option value="NY">NY</option>
+                        <option value="CA">CA</option>
+                        <option value="TX">TX</option>
+                        <option value="FL">FL</option>
+                        <option value="IL">IL</option>
+                        <option value="PA">PA</option>
+                        <option value="OH">OH</option>
+                        <option value="GA">GA</option>
+                        <option value="NC">NC</option>
+                        <option value="MI">MI</option>
+                        <!-- ...other states... -->
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="half">
+                    <label for="zip">ZIP Code</label>
+                    <input type="text" id="zip" name="zip" required maxlength="10" autocomplete="postal-code">
+                </div>
+                <div class="half">
+                    <label for="income">Annual Income</label>
+                    <input type="number" id="income" name="income" required min="0" step="1000" placeholder="$50,000">
+                </div>
+            </div>
+            <button type="submit" class="submit-btn">Apply Now</button>
+            <div id="signup-message" style="display:none; margin-top:14px; color:#1B365D; font-weight:600; text-align:center;">Close the window to return to chat</div>
+        </form>
+        <div class="credit-card-footer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" style="vertical-align:middle;">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <circle cx="12" cy="16" r="1"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+            <span style="margin-left:6px;">Your information is encrypted and secure</span>
+        </div>
+    </div>
+    <script>
+        function handleCreditCardSignup(event) {
+            event.preventDefault();
+            const btn = event.target.querySelector('.submit-btn');
+            const msg = document.getElementById('signup-message');
+            const originalText = btn.textContent;
+            btn.textContent = 'Submitting...';
+            btn.disabled = true;
+            msg.style.display = 'none';
+            setTimeout(() => {
+                msg.style.display = 'block';
+                btn.textContent = originalText;
+                btn.disabled = false;
+            }, 1800);
+        }
+    </script>
+</body>
+</html>

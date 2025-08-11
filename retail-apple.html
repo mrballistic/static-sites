@@ -75,6 +75,9 @@
                 </svg>
                 Add Coupon to Apple Wallet
             </button>
+            <div id="retail-apple-message" style="display:none; margin-top: 0.5em; color: #FF6B35; font-weight: 500; background: #fff5f0; border-radius: 4px; padding: 0.5em 1em;">
+                Close the window to return to chat
+            </div>
             
             <p class="security-note">
                 🎁 Coupon will be available offline and updates automatically
@@ -87,13 +90,16 @@
             const btn = document.querySelector('.add-wallet-btn');
             btn.textContent = 'Adding Coupon...';
             btn.disabled = true;
-            
+            const message = document.getElementById('retail-apple-message');
+            if (message) message.style.display = 'none';
             setTimeout(() => {
                 btn.innerHTML = '✓ Coupon Added to Apple Wallet';
                 btn.style.background = '#34C759';
-                
                 setTimeout(() => {
-                    alert('Close the window to return to chat');
+                    if (message) {
+                        message.style.display = 'block';
+                        message.setAttribute('aria-live', 'polite');
+                    }
                 }, 1000);
             }, 2000);
         }
