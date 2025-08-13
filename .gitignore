@@ -1,0 +1,17 @@
+# Node/Vercel/Build output
+.vercel/
+node_modules/
+*.log
+.DS_Store
+.env
+output/
+/dist/
+/build/
+.cache/
+*.tmp
+*.swp
+*.bak
+# OS/Editor
+.idea/
+.vscode/
+Thumbs.db
